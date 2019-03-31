@@ -1,0 +1,75 @@
+﻿@using BlazorComponents.Extensions
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+
+<div class="ui-inputswitch ui-widget
+     @((Checked ? "ui-inputswitch-checked" : ""))
+     @((Disabled ? "ui-state-disabled" : ""))
+     @((ReadOnly ? "ui-inputswitch-readonly" : ""))
+     @((Focused ? "ui-inputswitch-focus" : ""))"
+     onclick="@OnClick"
+     aria-checked="@Checked">
+    <div class="ui-helper-hidden-accessible">
+        <input ref="cb" type="checkbox" id="@InputId" name="@Name" tabindex="@TabIndex" bind="@Checked" onfocus="@OnFocus" onblur="@OnBlur" disabled="@Disabled" />
+    </div>
+    <span class="ui-inputswitch-slider"></span>
+</div>
+
+@functions {
+    ElementRef cb;
+
+    [Parameter]
+    private int TabIndex { get; set; } = 0;
+
+    [Parameter]
+    private string InputId { get; set; } = "";
+
+    [Parameter]
+    private string Name { get; set; } = "";
+
+    [Parameter]
+    private bool Disabled { get; set; } = false;
+
+    [Parameter]
+    private bool ReadOnly { get; set; } = false;
+
+    [Parameter]
+    private bool Checked { get; set; }
+
+    [Parameter]
+    private Action<bool> CheckedChanged { get; set; }
+
+    private bool Focused { get; set; } = false;
+
+    private void OnClick(UIMouseEventArgs e)
+    {
+        if (!Disabled && !ReadOnly)
+        {
+            Toggle();
+            cb.Focus(JSRuntime);
+        }
+    }
+
+    private void OnFocus(UIFocusEventArgs e)
+    {
+        Focused = true;
+    }
+
+    private void OnBlur(UIFocusEventArgs e)
+    {
+        Focused = false;
+    }
+
+    private void Toggle()
+    {
+        UpdateModel(!Checked);
+    }
+
+    private void UpdateModel(bool value)
+    {
+        Checked = value;
+        CheckedChanged?.Invoke(Checked);
+
+        Console.WriteLine("InputSwitch - New value is "+Checked);
+    }
+}

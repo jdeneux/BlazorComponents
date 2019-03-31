@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorComponents", "src\BlazorComponents\BlazorComponents.csproj", "{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|x64.Build.0 = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Debug|x86.Build.0 = Debug|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|x64.ActiveCfg = Release|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|x64.Build.0 = Release|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{AFEAD910-FECA-4C8A-B7D0-4E9DC77C4B1C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39F84BE4-5A5B-4892-8C35-6F1E29C9767D}
+	EndGlobalSection
+EndGlobal

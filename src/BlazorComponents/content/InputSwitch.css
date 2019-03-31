@@ -1,0 +1,73 @@
+﻿/*
+    This file is to show how CSS and other static resources (such as images) can be
+    used from a library project/package.
+*/
+
+.ui-inputswitch {
+    position: relative;
+    display: inline-block;
+    width: 3em;
+    height: 1.75em;
+}
+
+.ui-inputswitch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 30px;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    border-radius: 30px;
+    background: #cccccc;
+}
+
+    .ui-inputswitch-slider:before {
+        position: absolute;
+        content: "";
+        height: 1.250em;
+        width: 1.250em;
+        left: .25em;
+        bottom: .25em;
+        border-radius: 50%;
+        -webkit-transition: .3s;
+        transition: .3s;
+        background-color: #ffffff;
+    }
+
+.ui-inputswitch-checked .ui-inputswitch-slider:before {
+    -webkit-transform: translateX(1.250em);
+    -ms-transform: translateX(1.250em);
+    transform: translateX(1.250em);
+}
+
+.ui-inputswitch.ui-state-disabled .ui-inputswitch-slider,
+.ui-inputswitch-readonly .ui-inputswitch-slider {
+    cursor: default;
+}
+
+.ui-inputswitch.ui-inputswitch-focus .ui-inputswitch-slider {
+    background: #b7b7b7;
+}
+
+.ui-inputswitch:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+    background-color: #b7b7b7;
+}
+
+.ui-inputswitch.ui-inputswitch-checked .ui-inputswitch-slider {
+    background-color: #007ad9;
+}
+
+.ui-inputswitch.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+    background-color: #116fbf;
+}
+
+.ui-inputswitch.ui-inputswitch-checked.ui-inputswitch-focus .ui-inputswitch-slider {
+    background: #005b9f;
+}
